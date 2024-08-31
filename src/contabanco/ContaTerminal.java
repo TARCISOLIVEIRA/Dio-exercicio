@@ -4,17 +4,36 @@
  */
 package contabanco;
 
-/**
- *
- * @author tarci
- */
+import java.util.Scanner;
+
+
 public class ContaTerminal {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+  Scanner in = new Scanner(System.in);      
+int numero = 0;
+double saldo = 0;
+String agencia = "";
+String nomeCliente = "";
+        
+    System.out.println("------CONTA BANCARIA---------");
+    System.out.println("");
+    System.out.print("Por favor , digite o numero da conta.....:");
+    numero = in.nextInt();
+    System.out.println("------AGENCIA---------");
+    System.out.print("Digite o nome da agencia.....:");
+    agencia = in.next();
+    System.out.println("--------- CLIENTE-----------");
+    System.out.print("digite o seu nome....:");
+    nomeCliente = in.next();
+    System.out.println("----------- SALDO ------------");
+    System.out.print("Informe o seu saldo atual...");
+    saldo = in.nextDouble();
+    
+    System.out.println("Ola,  " +  nomeCliente + " obrigado por criar uma conta em nosso banco, sua agencia e " + agencia + ", conta " + numero + " e seu saldo R$" + saldo + " ja esta disponivel para saque.");
+       
     }
     
 }
